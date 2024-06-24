@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Box } from "@chakra-ui/react";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 import Index from "./pages/Index";
 import ProductListing from "./pages/ProductListing";
 import ProductDetail from "./pages/ProductDetail";
