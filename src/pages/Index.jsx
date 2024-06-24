@@ -1,19 +1,24 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Container, Heading, Text, Button, VStack, Image } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
-    </Container>
+    <Box>
+      <Container maxW="container.xl" centerContent py={10}>
+        <VStack spacing={8} align="center">
+          <Heading as="h1" size="2xl" textAlign="center">
+            Welcome to ElectroShop
+          </Heading>
+          <Text fontSize="xl" textAlign="center">
+            Your one-stop shop for all your electronic needs
+          </Text>
+          <Image src="https://source.unsplash.com/random/800x400/?electronics" alt="Electronics" borderRadius="md" />
+          <Button as={RouterLink} to="/products" colorScheme="blue" size="lg">
+            Shop Now
+          </Button>
+        </VStack>
+      </Container>
+    </Box>
   );
 };
 

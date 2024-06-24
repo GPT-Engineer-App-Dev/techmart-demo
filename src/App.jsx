@@ -1,11 +1,17 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Index from "./pages/Index.jsx";
+import ProductListing from "./pages/ProductListing.jsx";
+import ProductDetail from "./pages/ProductDetail.jsx";
+import Navbar from "./components/Navbar.jsx";
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route exact path="/" element={<Index />} />
+        <Route path="/products" element={<ProductListing />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
       </Routes>
     </Router>
   );
